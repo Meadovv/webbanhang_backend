@@ -1,4 +1,5 @@
 const mysql = require('mysql');
+const database_config = require('../configs/database.config');
 
 class Database {
     constructor() {
@@ -7,11 +8,11 @@ class Database {
 
     connect() {
         this.connection = mysql.createConnection({
-            host: 'localhost',
-            port: 3306,
-            user: 'root',
-            password: '25062003',
-            database: 'shop'
+            host: database_config.database,
+            port: database_config.host,
+            user: database_config.user,
+            password: database_config.password,
+            database: database_config.shop
         });
 
         this.connection.connect((err) => {
