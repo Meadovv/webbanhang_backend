@@ -1,7 +1,7 @@
 const database_config = {
   host: 'localhost',
-  user: 'your_username',
-  password: 'your_password',
-  database: 'your_database'
+  user: 'root',
+  password: '25062003',
+  database: 'shop'
 }
 module.exports = database_config;

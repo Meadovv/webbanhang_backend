@@ -37,6 +37,7 @@ class User {
                     name: user.name,
                     account_name: user.account_name,
                     email: user.email,
+                    password: user.password,
                     phone: user.phone,
                     cccd: user.cccd,
                     date_of_birth: user.date_of_birth,
@@ -60,7 +61,16 @@ class User {
                     return resolve(null);
                 }
                 const user = results[0];
-                return resolve({ id: user.id, name: user.name, account_name: user.account_name, email: user.email, phone: user.phone, cccd: user.cccd, date_of_birth: user.date_of_birth, role: user.role });
+                return resolve({ 
+                    id: user.id,
+                    name: user.name,
+                    account_name: user.account_name, 
+                    email: user.email,
+                    password: user.password,
+                    phone: user.phone,
+                    cccd: user.cccd,
+                    date_of_birth: user.date_of_birth,
+                    role: user.role });
             });
         });
     }

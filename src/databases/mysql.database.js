@@ -8,11 +8,11 @@ class Database {
 
     connect() {
         this.connection = mysql.createConnection({
-            host: database_config.database,
-            port: database_config.host,
+            host: database_config.host,
+            port: database_config.port,
             user: database_config.user,
             password: database_config.password,
-            database: database_config.shop
+            database: database_config.database
         });
 
         this.connection.connect((err) => {
