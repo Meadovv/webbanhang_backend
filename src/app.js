@@ -16,7 +16,6 @@ const Database = require('./databases/mysql.database');
 // Database
 Database.getInstance();
 
-
 // Router
 app.use('/api/v1', require('./routes/router'));
 
